@@ -1,0 +1,416 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display:flex;
+            justify-content:space-evenly;
+            text-align:center;
+        }
+        .a{
+            height:80px;
+            width:80px;
+            background-color:red;
+            transition: 1s all  ease-in-out;
+        }
+        .a:hover{
+            background-color:blue;
+            transform:scale(1.4);
+        }
+        #x{
+            margin:8px;
+        }
+        .b{
+            height:80px;
+            width:80px;
+            background-color:red;
+            margin:8px;
+            transition: 1s all  ease-in-out;
+        }
+        .b:hover{
+            transform:translate(40px, 80px);
+        }
+        .c{
+            height:80px;
+            width:80px;
+            background-color:red;
+            margin:8px;
+            transition: 1s all  ease-in-out;
+        }
+        .c:hover{
+            transform: rotate(45deg);
+        }
+        .d{
+            height:80px;
+            width:80px;
+            background-color:red;
+            margin:8px;
+            transition: 1s all  ease-in-out;
+        }
+        .d:hover{
+            transform:skew(45deg);
+        }
+        .e{
+            height:80px;
+            width:80px;
+            background-color:red;
+            margin:8px;
+            transition: 1s all  ease-in-out;
+        }
+        .e:hover{
+            transform:rotate(5520deg);
+        }
+        @media (max-width:350px){
+            .container{
+                display:flex;
+                flex-direction:column;
+            }
+        }
+        .box{
+            height:120px;
+            width:120px;
+            background-color:yellow;
+            text-align:center;
+            transform:rotate(45deg);
+        }
+        .u{
+            position:relative;
+            top:50px;
+            display:flex;
+            justify-content:space-around;
+        }
+        .v{
+            height:120px;
+            width:120px;
+            background-color:blue;
+            margin:2px;
+            transform:scaleX(2);
+            text-align:center;
+        }
+    </style>
+    <marquee style="color:red; background-color:yellow; font-size:30px">Transform In CSS</marquee>
+    <br><br>
+    <div class="container">
+        <div class="a" id="x"><h4>Scale</h4></div>
+        <div class="b"><h4>Translate</h4></div>
+        <div class="c"><h4>Rotate</h4></div>
+        <div class="d"><h4>Skew</h4></div>
+        <div class="e"><h4>Rotate</h4></div>
+    </div>
+    <div class="box"><h4 style="transform:rotate(-45deg); position:absolute; top:20px; left:30px">Rotate</h4></div>
+    <div class="u">
+        <div class="v"><h4>Scale</h4></div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin:0px;
+            padding:4px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            row-gap: 20px;
+            column-gap:40px;
+            text-align: center;
+        }
+        .u{
+            height:200px;
+            width:200px;
+            background-color:red;
+        }
+        .v{
+            height:200px;
+            width:200px;
+            background-color:blue;
+        }
+        .w{
+            height:200px;
+            width:200px;
+            background-color:green;
+        }
+        .x{
+            height:200px;
+            width:200px;
+            background-color:yellow;
+            transition: all 1s ease-in-out;
+        }
+        .x:hover{
+            transform:rotateX(90deg);
+        }
+        .y{
+            height:200px;
+            width:200px;
+            background-color:darkblue;
+            transition:all 2s ease-in-out;
+        }
+        .z{
+            height:200px;
+            width:200px;
+            background-color:darkred;
+            transition:all 4s ease-in-out;
+        }
+        .z:hover{
+            transform:rotateY(4400deg);
+        }
+        .y:hover{
+            /* transform:rotateX(45deg); */
+            transform:rotateY(90deg);
+        }
+        .f{
+            height:200px;
+            width:200px;
+            background-color: red;
+            transition: all 2s ease-in-out;
+            /* float:left; */
+            float:right;
+        }
+        .f:hover{
+            height:200px;
+            width:200px;
+            transform: rotateZ(45deg);
+            /* float:right; */
+        }
+        .i{
+            height:200px;
+            width:200px;
+            background-color: blue;
+            margin-right:8px;
+            margin-left:8px;
+            transition: all 2s ease-in-out;
+            /* float:left; */
+            float:right;
+        }
+        .i:hover{
+            background-color:green;
+            transform: rotateZ(45deg);
+            transform-origin: 20px;
+        }
+        .l{
+            height:200px;
+            width:200px;
+            background-color: green;
+            transition:all 2s ease-in-out;
+        }
+        .l:hover{
+            transform:rotate(45deg);
+            transform-origin:right;
+        }
+        @media (max-width:800px) {
+            .container{
+                flex-direction:row-reverse;
+                background-color:lightgreen;
+            }
+        }
+        @media (max-width:600px) {
+            .container{
+                background-color:lightcoral;
+                flex-direction:column;
+            }
+        }
+        @media (max-width:400px) {
+            .container{
+                flex-direction:row;
+                background-color:black;
+            }
+        }
+        @media (max-width:300px){
+            .container{
+                background-color:grey;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="u"><h1>1</h1></div>
+        <div class="v"><h1>2</h1></div>
+        <div class="w"><h1>3</h1></div>
+        <div class="x"><h1>4</h1></div>
+        <div class="y"><h1>5</h1></div>
+        <div class="z"><h1>6</h1></div>
+    </div>
+    <div class="f"></div>
+    <div class="i"></div>
+    <div class="l"><h1>Transform</h1></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p">
+    <form>
+        <label>Email</label><br>
+
+        <input type="email" id="x" placeholder="Example@email.com"><br>
+        <div class="div"></div>
+        <div id="t"></div><br>
+        <div class="m" style="color:red">Make sure the Email has 3 characters and has @ and a .</div>
+        <label>Password</label><br>
+        <input type="password" id="y" placeholder="Your Password"><br>
+        <div class="iv"></div>
+        <div class="s" style="color:red">Make sure password is more than 8 characters</div>
+        <button onClick="UI()">submit</button>
+    </form>
+    </div>
+    <style>
+        body{
+            background-color:black;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .p{
+            height:250px;
+            width:498px;
+            background-color: white;
+
+            text-align: center;
+
+            margin:40px;
+            padding:30px;
+        }
+    </style>
+    <script>
+        let a=document.querySelector("#x").value;
+        let b=document.querySelector("#y").value;
+        let greet=(name)=>{
+            console.log(`Hello Mr. ${name}`);
+        }
+        let UI=()=>{
+            let name=prompt("Enter the name");
+            greet(name);
+        }
+        document.querySelector("button").addEventListener("mouseover", ()=>{
+            document.querySelector("button").style.backgroundColor="green";
+        });
+        document.querySelector("button").addEventListener("mouseleave", ()=>{
+            document.querySelector("button").style.backgroundColor="white";
+        });
+        document.querySelector("button").addEventListener("mouseover", ()=>{
+            document.querySelector("input").style.backgroundColor="blue";
+            document.querySelector("body").style.backgroundColor="blue";
+        });
+        document.querySelector("button").addEventListener("mouseout", ()=>{
+            document.querySelector("input").style.backgroundColor="white";
+            document.querySelector("body").style.backgroundColor="blue";
+        });
+        document.querySelector("#x").addEventListener("input", ()=>{
+            document.querySelector(".div").innerText=`${document.querySelector("#x").value}`;
+        });
+        document.querySelector("#y").addEventListener("input", ()=>{
+            document.querySelector(".iv").innerText=`${document.querySelector("#y").value}`;
+        });
+        document.querySelector("#y").onmouseover=()=>{
+            alert("MouseOver");
+        }
+        document.querySelector("button").onmousedown=()=>{
+            document.querySelector("button").style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button, p, .aler, .y, .z, .po{
+            position:relative;
+            left:20px;
+        }
+        body{
+            color:white;
+            background-color: black;
+        }
+        .po{
+            display:flex;
+            justify-content:space-between;
+            width:1000px;
+            background-color: black;
+        }
+        button{
+            height:30px;
+            width:80px;
+        }
+        .y, .z{
+            color:white;
+        }
+        .z{
+            color:rgb(122, 108, 108);
+        }
+        .aler{
+            color:red;
+        }
+        .ale{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:absolute; left:30px;">
+        <p>New Employees</p>
+        <div class="po">
+            <div class="small">
+                <label for="name">Enter Name</label><br><br><input type="text" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="small">
+                <label for="profession">Enter Profession</label><br><br><input type="text" id="p" placeholder="Enter Your Profession">
+            </div>
+            <div class="small">
+                <label for="age">Enter Age</label><br><br>
+                <input type="number" id="age" placeholder="Enter Your Age">
+            </div>
+        </div><br>
+        <button type="submit" onclick="xyz()">Add User</button>
+        <br><br>
+        <div class="aler"></div>
+        <div class="ale"></div>
+        <div class="y"><h4>Added Employees</h4></div>
+        <div class="z">You have 0 Employees</div>
+        <div class="pong"></div>
+    <script>
+        let x=document.querySelector("button");
+        let a=document.querySelector("#name");
+        let b=document.querySelector(".p");
+        let c=document.querySelector(".age");
+        function xyz(){
+            if(a==null || b==null || c==null){
+                document.querySelector(".aler").innerText="Error: Please Make Sure All the fields are filled before adding in  an employee!";
+            }
+            else{
+                document.querySelector(".ale").innerText="Successfully Added";
+            }
+        }
+        // document.querySelector("button").addEventListener("click", ()=>{
+        //     document.querySelector(".pong").innerText=`Name: ${a.value} Profession: ${b.value} Age: ${c.value}`;
+        // });
+    </script>
+</body>
+</html>
